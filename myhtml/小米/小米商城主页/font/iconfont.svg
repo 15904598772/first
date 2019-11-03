@@ -1,0 +1,29 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<!--
+2013-9-30: Created.
+-->
+<svg>
+<metadata>
+Created by iconfont
+</metadata>
+<defs>
+
+<font id="iconfont" horiz-adv-x="1024" >
+  <font-face
+    font-family="iconfont"
+    font-weight="500"
+    font-stretch="normal"
+    units-per-em="1024"
+    ascent="896"
+    descent="-128"
+  />
+    <missing-glyph />
+    
+    <glyph glyph-name="shopping-cart-outline" unicode="&#59077;" d="M899.413333 597.333333a85.333333 85.333333 0 0 1-72.533333 42.666667H280.746667L256 736.426667A42.666667 42.666667 0 0 1 213.333333 768H128a42.666667 42.666667 0 0 1 0-85.333333h52.906667L298.666667 244.906667A42.666667 42.666667 0 0 1 341.333333 213.333333h384a42.666667 42.666667 0 0 1 37.973334 23.466667l139.946666 279.893333A85.333333 85.333333 0 0 1 899.413333 597.333333z m-200.533333-298.666666H373.76L304.213333 554.666667h522.666667zM320 64m-64 0a64 64 0 1 1 128 0 64 64 0 1 1-128 0ZM746.666667 64m-64 0a64 64 0 1 1 128 0 64 64 0 1 1-128 0Z"  horiz-adv-x="1024" />
+
+    
+
+
+  </font>
+</defs></svg>

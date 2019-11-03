@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body{
+      font-size: 14px;
+      margin:0;
+      background: #f9f9f9;
+    }
+    p{
+      margin:0;
+    }
+    h4{
+      margin:0;
+    }
+    a{
+       text-decoration: none;
+    }
+    ul{
+      padding:0;
+      margin: 0;
+
+    }
+    li{
+       list-style: none;
+    }
+
+    /* css reset end*/
+    .container{
+      background-color: white;
+      width: 854px;
+      height: 500px;
+      padding:0 34px 30px;
+      margin: 0 auto;
+      margin-top:100px;
+    }
+    /* top-logo start */
+    .container .top-logo{
+      padding-bottom: 40px;
+    }
+    .container .top-logo a{
+      width: 49px;
+      height: 48px;
+      display: block;
+      margin:0 auto;
+      cursor:default;
+      background-image: url("./milogo.png");
+    }
+    /* top-logo end */
+    /* register-info start */
+    .container .register-info h4{
+      font-size: 30px;
+      font-weight: normal;
+      text-align: center;
+    }
+    /* register-info end */
+    /* register-form start */
+    .container .register-form{
+      width: 332px;
+      padding: 30px 0;
+      margin: 0 auto;
+      font-size: 14px;
+    }
+    .register-form .select-regions .sr-box{
+      height: 40px;
+      border: 1px solid #e8e8e8;
+      padding-left: 14px;
+      color: #555;
+      line-height: 40px;
+    }
+    .register-form h4{
+      padding-bottom: 5px;
+      color: #333;
+      font-weight: normal;
+      font-size: 14px;
+    }
+    .register-form .sr-box p{
+      width: 275px;
+      border-right: 1px solid #e8e8e8;
+      float: left;
+    }
+    .register-form .sr-box i{
+      float: left;
+      display: block;
+      width: 16px;
+      height: 16px;
+      margin: 11px 12px 0 12px;
+      background-image: url("./icon_user.png")
+    }
+    /* register-form end */
+    .register-form .select-regions,.select-form,.select-cycode{
+        padding-bottom: 5px;
+    }
+    .register-form .region_tip_text{
+        color: #666;
+        margin-bottom: 15px;
+
+
+    }
+    .select-cycode .sc-box{
+        height: 40px;
+        border: 1px solid #e8e8e8;
+    }
+    .select-cycode .sc-box .scb-left{
+      width: 50px;
+      padding: 0 9px;
+      height: 40px;
+      line-height: 40px;
+      /* background-color: red; */
+      float: left;
+      border-right: 1px solid #e8e8e8;
+
+    }
+    .select-cycode .sc-box .scb-right{
+      width: 236px;
+      /* padding: 10px; */
+      height: 40px;
+      /* background-color: blue; */
+      float: left;
+    }
+    .select-cycode .scb-left p{
+      display: inline-block;
+       
+      
+    }
+    .select-cycode .sc-box .icon-arrow{
+      display: inline-block;
+      margin-left: 6px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: #9d9d9d transparent transparent transparent;
+       
+    }
+    .select-cycode .scb-right input{
+      border: 0;
+      outline: none;
+      height: 20px;
+      line-height: 20px;
+      padding: 10px;
+
+    }
+    .register-form .submit-btn input{
+      width: 330px;
+      height: 42px;
+      background-color: #ff6700;
+      border: 1px solid rgba(186,186,186,0.3);
+      color: white;
+      font-size: 14px;
+      margin-top: 30px;
+
+    }
+    .register-msg{
+      text-align: center;
+      padding-top: 40px;
+      color: #9d9d9d;
+      font-size: 14px;
+    }
+    .register-msg a{
+      color: #333;
+      font-weight: bold;
+    }
+    .footer{
+      margin-top: 10px;
+    }
+    .footer .link-area ul{
+      text-align: center;
+    }
+    .footer .link-area li{
+      display: inline-block;
+      color: #757575;
+    }
+    .link-area li span{
+      padding: 0 10px;
+    }
+    .link-area li span:hover{
+      color: #333;
+      cursor: pointer;
+    }
+    .link-area li .active{
+      color: #333;
+    }
+    .footer .intro{
+      color: #9d9d9d;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="top-logo">
+     <a href="javascript:void(0)"></a>
+    </div>
+    <div class="register-info">
+      <h4>注册小米帐号</h4>
+    </div>
+    <div class="register-form"> 
+      <h4>国家/地区</h4>
+      <div class="select-regions">
+        <div class="sr-box">
+          <p>中国</p>
+          <i></i>
+        </div>
+      </div>
+    <div class="region_tip_text">
+      成功注册帐号后，国家/地区将不能被修改
+    </div>
+    <h4>手机号码</h4>
+    <div class="select-cycode">
+      <div class="sc-box">
+        <div class="scb-left">
+          <p>+86</p>
+          <i class="icon-arrow"></i>
+        </div>
+        <div class="scb-right">
+          <input type="text" placeholder="请输入手机号码">
+        </div>
+      </div>
+    </div>
+      <div class="submit-btn">
+        <input type="button" value="立即注册">
+      </div>
+    </div>
+    <div class="register-msg">
+      已阅读并同意：小米 
+      <a href="javascript:void(0)">用户协议</a>
+       和 
+      <a href="javascript:void(0)">隐私政策</a> 
+        
+    </div>
+  </div>
+  <div class="footer">
+    <div class="link-area">
+       <ul>
+         <li> <span>简体</span> | </li>
+         <li> <span>繁体</span> | </li>
+         <li> <span>English</span> | </li>
+         <li> <span>常见问题</span>  </li>
+       </ul>
+    </div>
+    <div class="intro">小米公司版权所有-京ICP备10046444-<img src="https://account.xiaomi.com/static/res/9204d06/account-static/respassport/acc-2014/img/ghs.png">京公网安备11010802020134号-京ICP证110507号</div>
+  </div>
+</body>
+</html>
