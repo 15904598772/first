@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function choosefood(){
+            var food="";
+            var cf=parseInt(Math.random()*10);
+            switch (cf){
+                case 1:food = "a";break;
+                case 2:food = "b";break;
+                case 3:food = "c";break;
+                case 4:food = "d";break;
+                case 5:food = "e";break;
+                case 6:food = "f";break;
+                case 7:food = "g";break;
+                case 8:food = "h";break;
+                default:food ="no";
+            }
+            return food;
+        }
+        var choose=confirm("是否选择晚餐");
+        if(choose){
+            var num=prompt("请输入吃饭人数");
+            var namelist=[];
+            var foodlist=[];
+            for(i=0;i<num;i++){
+                var username=prompt("请输入第"+(i+1)+"个人的名字");
+                namelist.push(username);
+            }
+            for(i=0;i<num;i++){
+                foodlist.push(namelist[i]+"吃"+choosefood());
+            }
+            console.log(foodlist);
+        }
+    </script>
+</body>
+</html>

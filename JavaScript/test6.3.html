@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      var today=new Date();
+      var year=today.getFullYear();
+      var month=today.getMonth()+1;
+      var date=today.getDate();
+      var hour=today.getHours();
+      var minutes=today.getMinutes()+1;
+      var seconds=today.getSeconds()+1;
+      var week=today.getDay()+1;
+      document.write("现在是"+year+"年"+month+"月"+date+"日"+hour+"时"+minutes+"分"+seconds+"秒 (星期"+week+")");
+    </script>
+</body>
+</html>

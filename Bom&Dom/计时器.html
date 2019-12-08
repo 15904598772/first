@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="num">100</div>
+    <button id="btn">开始</button>
+    <script>
+        var oDiv=document.getElementById("num");
+        var oBtn=document.getElementById("btn");
+        var isStop=true;
+        var timer=null;
+        oBtn.onclick=function(){
+            isStop=!isStop;
+            if(isStop){
+                clearInterval(timer)
+                oBtn.innerText="开始";
+
+            }else{
+                timer=setInterval(function(){
+                --oDiv.innerText;
+
+            },1000)
+            oBtn.innerText="暂停";
+            }
+             
+        }
+    
+    </script>
+</body>
+</html>

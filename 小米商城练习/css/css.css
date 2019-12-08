@@ -1,0 +1,219 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+.topbar{ 
+    height: 40px;
+    background-color: #333;
+}
+.topbar .topbar-container{
+    width: 1226px;
+    height: 40px;
+    margin: 0 auto;
+    line-height: 40px;
+    position: relative;
+}
+.topbar .topbar-container .tc-nav{
+    width: 705px;
+    display: inline-block;
+}
+.topbar .topbar-container a{
+    width: 48px;
+    height: 40px;
+    color: #b0b0b0;
+    font-size: 12px;
+}
+.topbar-container .a11{
+    position: relative;
+    /* display: inline-block; */
+}
+.topbar-container .a11 .a11-app{
+    width: 124px;
+    height: 0;
+    /* margin: 18px 17px 12px 17px; */
+    background-color: #fff;
+    position: absolute;
+    right: -37px;
+    box-shadow: 0 1px 5px #aaa;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+.topbar-container .a11 .triangle{
+    border: 1px solid #aaa;
+    border-color: transparent transparent #fff transparent;
+    position: absolute;
+    display: inline-block;
+    border-width: 12px;
+    top: 5px;
+    left: 12px;  
+    display: none;
+}
+.topbar-container .a11-app img{
+    width: 90px;
+    height: 90px;
+    margin: 18px 17px 12px 17px;
+}
+.a11 .a11-app span{
+    font-size: 14px;
+    position: absolute;
+    left: 18px;
+    top: 105px;
+}
+.a11:hover .a11-app{
+    height: 148px;
+}
+.a11:hover .triangle{
+    display: block;
+}
+.topbar .topbar-container span{
+    color: #424242;
+    margin: 0 .6px;
+}
+.topbar-container .tc-cart{
+    width: 120px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    color: #b0b0b0;
+    background: #424242;
+    text-align: center;
+    font-size: 12px;
+}
+.topbar-container .tc-mes{
+    width: 143px;
+    position: absolute;
+    right: 130px;
+    display: inline-block;
+}
+.tc-cart .tca-mes{
+    width: 300px;
+    height: 0;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    box-shadow: 0 1px 5px #aaa;
+    transition: height 0.3s ease;
+    overflow: hidden;
+}
+.tc-cart .tca-mes span{
+    text-align: center;
+    line-height: 150px;
+    color: black;
+}
+.tc-cart:hover .tca-mes{
+    height: 150px;
+}
+.tc-cart:hover{
+    color: #ff6700;
+}
+.header{
+    height: 100px;
+}
+.header .header-container{
+    width: 1226px;
+    height: 100px;
+    margin: 0 auto;
+    position: relative;
+}
+.header .header-container .hc-logo{
+    width: 62px;
+    height: 55px;
+    display: inline-block;
+}
+.header-container .hc-logo .hl-content{
+    position: relative;
+    width: 55px;
+    height: 55px;
+    margin-top: 22px;
+    background-color: #ff6700;  
+}
+.hc-logo .hl-content::after{
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    content: "";
+    background-image: url('../pic/mi-logo.png');
+    display: block;
+    background-position: center;
+    /* top: 0; */
+    /* left: 0; */
+    transition: all 0.1s ease;
+}
+.hc-logo .hl-content::before{
+    position: absolute;
+    height: 55px;
+    width: 55px;
+    content: "";
+    background-image: url('../pic/mi-home.png');
+    display: block;
+    background-position: center;
+    /* top: 0; */
+    left: -55px;
+    transition: all 0.1s ease;
+}
+.hc-logo:hover .hl-content::before{
+    left: 0;
+}
+.hc-logo:hover .hl-content::after{
+    left: 55px;
+}
+.header .header-container .hc-center{
+    height: 88px;
+    display: inline-block;
+}
+.header-container .hc-center ul{
+    height: 88px;
+    padding: 12px 0 0 30px;
+    margin-left: 100px;
+}
+.hc-center ul li{
+    display: inline-block;
+    list-style: none;
+    padding: 26px 10px 38px;
+    color: #333;
+    font-size: 16px;
+}
+.hc-right{
+    display: inline-block;
+}
+.hc-right .hr-form{
+    border: 1px solid #e0e0e0;
+    width: 297px;
+    height: 50px;
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    right: 0;
+}
+.hr-form .hf-left{
+    width: 245px;
+    height: 50px;
+    border-right: 1px solid #e0e0e0;
+    display: inline-block;
+}
+.hr-form .hf-left .hl-mes{
+    width: 223px;
+    height: 48px;
+    padding: 0 10px;
+    position: relative;
+     
+}
+.hr-form.hl-mes .hm-mes{
+    position: absolute;
+    /* line-height: 50px; */
+    /* display: inline-block; */
+    /* text-align: center; */
+    top: 20px;
+    right: 0;
+}
+.hf-left .hl-mes span{
+    font-size: 12px;
+    color: #757575;
+    background: #eee;
+    /* line-height: 50px; */
+}
+
+

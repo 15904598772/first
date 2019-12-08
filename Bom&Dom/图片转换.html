@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #div1{
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+            margin: 0 auto;
+
+        }   
+        #div2{
+            width: 500px;
+            height: 250px;
+            border-bottom: 1px;
+            border-bottom-color: black;
+            border-bottom-style: solid;
+        }
+        #div3,#div4,#div5,#div6{
+            width: 120px;
+            height: 250px;
+            border-right: 1px;
+            border-right-color: black;
+            border-right-style: solid;
+            display: inline-block;
+        }
+        #div6{
+            border-right:0;
+        }
+        #div1 #img2{
+            height: 220px;
+            width: 480px;
+        }
+        #div1 #img3,#img4,#img5,#img6{
+             
+            width: 100px;
+            height: 120px;
+        }
+        /* #div4 #img4{
+            width: 100px;
+            height: 120px;
+        }
+        #div5 #img5{
+            width: 100px;
+            height: 120px;
+        }
+        #div6 #img6{
+            width: 100px;
+            height: 120px;
+        } */
+
+        
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <div id="div2"><img id="img2" src="../myhtml/小米首页/img/mi-third.jpg" alt=""></div>
+        <div id="div3"><img class="im" id="img3" src="../myhtml/小米首页/img/mi-third.jpg" alt=""></div>
+        <div id="div4"><img class="im" id="img4" src="../myhtml/小米首页/img/mi-second.jpg" alt=""></div>
+        <div id="div5"><img class="im" id="img5" src="../myhtml/小米首页/img/mi-last.jpg" alt=""></div>
+        <div id="div6"><img class="im" id="img6" src="../myhtml/小米/icon_user.png" alt=""></div>
+    </div>
+    <script>
+        // var oImage=document.getElementById("div1").getElementsByClassName("im");
+        var oImage=document.getElementsByClassName("im");
+        var aImage=document.getElementById("img2");
+        console.log(oImage)
+        for(var i=0;i<oImage.length;i++){
+            oImage[i].onmouseover = function(){
+                // console.log(this.getAttribute("src"));
+            var thisSrc=this.getAttribute("src");
+            aImage.setAttribute("src",thisSrc);
+
+        }
+        }
+         
+    </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+       #box{
+           width: 400px;
+           height: 400px;
+           position: relative;
+           display: inline-block;
+           /* float: left; */
+       }
+       #box img{
+           width: 400px;
+           height: 400px;
+           position: absolute;
+           z-index: 50;
+       }
+       #box #sbox{
+           width: 200px;
+           height: 200px;
+           /* background-color: white; */
+           background-color: rgba(243, 237, 237, 0.5);
+           position: absolute;
+           z-index: 100;    
+       }
+       #dbox{
+           width: 400px;
+           height: 400px;
+           display: inline-block;
+           overflow: hidden; 
+           position: relative;
+       }
+       #dbox img{
+           position: absolute;
+           /* width: 800px;
+           height: 800px; */
+       }
+        
+    </style>
+</head>
+<body>
+    <div id="box"><img src="./image/niu.png" alt="">
+        <div id="sbox"></div>
+    </div>
+    <div id="dbox">
+        <img id="d-img" src="./image/niu.png" alt="">
+    </div>
+    <script>
+        var oBox=document.getElementById("box");
+        var oSbox=document.getElementById("sbox");
+        var dImg=document.getElementById("d-img");
+        oBox.onmousemove = function(e){
+            // var thisLeft=e.clientX-oSbox.offsetLeft;
+            // var thisTop=e.clientY-oSbox.offsetTop;
+            var thisLeft=e.clientX;
+            var thisTop=e.clientY;
+            if(thisLeft>=300){
+                thisLeft=300;
+            }
+            if(thisLeft<=100){
+                thisLeft=100;
+            }
+            if(thisTop>=300){
+                thisTop=300;
+            }
+            if(thisTop<=100){
+                thisTop=100;
+            }
+            oSbox.style.left=thisLeft-100+"px";
+            oSbox.style.top=thisTop-100+"px";
+            dImg.style.left=-2*oSbox.offsetLeft+"px";
+            dImg.style.top=-2*oSbox.offsetTop+"px";
+
+            }
+             
+    
+    </script>
+</body>
+</html>

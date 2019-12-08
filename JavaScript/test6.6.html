@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      var arr=[];
+      for(var num=0;num<7;num++){
+        var input=prompt("输入第"+(num+1)+"科成绩");
+        input=parseInt(input);
+        arr.push(input);
+      }
+      var sum=0;
+      var arg=0;
+      for(var i=0;i<arr.length;i++){
+        sum=sum+arr[i];
+        if(arr[i]<60){
+            document.write(arr[i]+"不及格");
+            document.write("<br\>");
+      }
+        }
+         
+        // if(arr[i]<60){
+        //     document.write(arr[i]+"不及格");
+        //     document.write("<br\>");
+      
+      document.write("总分"+sum);
+      document.write("平均分"+sum/7);
+       
+       
+
+    </script>
+</body>
+</html>

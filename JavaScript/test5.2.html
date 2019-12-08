@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      function Min(x,y){
+          if(x>y){
+              return y;
+          }
+          else if(x<y){
+              return x;
+          }
+          else if(x=y){
+              alert("两值大小相同");
+              return 0;
+          }
+      }
+      var a=prompt("请输入第一个值");
+      var b=prompt("请输入第二个值");
+      alert(Min(a,b));
+
+
+    </script>
+</body>
+</html>

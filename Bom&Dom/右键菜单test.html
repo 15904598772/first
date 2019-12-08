@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+         
+        /*  */
+        #div1{
+            width: 100px;
+            height: 300px; 
+            background-color: gray;
+            display: none;
+        }
+        #ul1{
+            /* width: 0;
+            height: 0; */
+            /* position: absolute; */
+            list-style: none;
+        }
+        /* li{
+            width: 0;
+            height: 0;
+        } */
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <ul id="ul1">
+            <li id="li1">1</li>
+            <li id="li2">2</li>
+            <li id="li3">3</li>
+        </ul>
+    </div>
+    
+    <script>
+        var oDiv=document.getElementById("div1");
+        //var oUl=document.getElementById("ul1");
+        document.oncontextmenu=function(e){
+        // e.preventDefault();
+        oDiv.style.display="block";
+        oDiv.style.position="absolute";
+        oDiv.style.left=e.clientX+"px";
+        oDiv.style.top=e.clientY+"px";
+        e.preventDefault();
+
+
+      }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      function Merge(s1,s2){
+          var str="";
+          var str1="";
+          var str2="";
+          for(var i=0;i<s1.length;i++){
+              for(var j=i;j<=i;j++){
+                  str1=s1.charAt(i);
+                  str2=s2.charAt(j);
+                     
+              }
+              str+=str1+str2;
+          }
+          return str;         
+      }
+      var x="123";
+      var y="abc";
+      console.log(Merge(x,y));
+
+    </script>
+</body>
+</html>
