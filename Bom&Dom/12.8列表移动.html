@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #sel1 {
+            width: 100px;
+            height: 300px;
+            margin: 10px;
+        }
+
+        #sel2 {
+            width: 100px;
+            height: 300px;
+            margin: 10px;
+        }
+
+        button {
+            display: block;
+            margin: 5px;
+        }
+
+        .div2,.div1{
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <select multiple name="" id="sel1">
+            <option value="">选项1</option>
+            <option value="">选项2</option>
+            <option value="">选项3</option>
+            <option value="">选项4</option>
+            <option value="">选项5</option>
+        </select>
+        <select multiple name="" id="sel2">
+            <option value="">选项6</option>
+            <option value="">选项7</option>
+            <option value="">选项8</option>
+        </select>
+    </div>
+
+    <div class="div1">
+        <button id="btn1">选中添加到右边</button>
+        <button id="btn2">全部添加到右边</button>
+    </div>
+    <div class="div2">
+        <button id="btn3">选中删除到左边</button>
+        <button id="btn4">全部删除到左边</button>
+    </div>
+    <script>
+        var sel1=document.getElementById("sel1");
+        var sel2=document.getElementById("sel2");
+        var btn1=document.getElementById("btn1");
+        var btn2=document.getElementById("btn2");
+        var btn3=document.getElementById("btn3");
+        var btn4=document.getElementById("btn4");
+        // var obt=document.querySelectorAll("option");
+        sel1.ondblclick=function(){
+            console.log(sel1.selectedIndex);
+            console.log(sel1.options);
+            var thisoption = sel1.options[sel1.selectedIndex]
+            sel2.appendChild(thisoption);
+        }
+        sel2.ondblclick=function(){
+            var thisoption = sel2.options[sel2.selectedIndex]
+            sel1.appendChild(thisoption);
+        }
+        btn1.onclick=function(){
+            var domArr=[];
+            for(var i=0;i<sel1.options.length;i++){
+                console.log(sel1.options[i].selected)
+                if(sel1.options[i].selected){
+                    domArr.push(sel1.options[i])
+                }     
+            }
+            for(var j=0;j<domArr.length;j++){
+                sel2.appendChild(domArr[j]);
+            }
+        }
+
+        btn3.onclick=function(){
+            var domArr=[];
+            for(var i=0;i<sel2.options.length;i++){
+                console.log(sel2.options[i].selected)
+                if(sel2.options[i].selected){
+                    domArr.push(sel2.options[i])
+                }     
+            }
+            for(var j=0;j<domArr.length;j++){
+                sel1.appendChild(domArr[j]);
+            }
+        }
+
+        btn2.onclick=function(){
+            var domArr=[];
+            for(var i=0;i<sel1.options.length;i++){
+                console.log(sel1.options[i].selected)
+                domArr.push(sel1.options[i])   
+            }
+            for(var j=0;j<domArr.length;j++){
+                sel2.appendChild(domArr[j]);
+            }
+        }
+
+        btn4.onclick=function(){
+            var domArr=[];
+            for(var i=0;i<sel2.options.length;i++){
+                console.log(sel2.options[i].selected)
+                domArr.push(sel2.options[i])
+            }
+            for(var j=0;j<domArr.length;j++){
+                sel1.appendChild(domArr[j]);
+            }
+        }
+
+
+        
+         
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="div0">
+        <div class="div1">test1
+            <button class="btn1">向上</button>
+            <button class="btn2">向下</button>
+        </div>
+        <div class="div2">test2
+                <button class="btn1">向上</button>
+                <button class="btn2">向下</button>
+        </div>
+        <div class="div3">test3
+                <button class="btn1">向上</button>
+                <button class="btn2">向下</button>
+        </div>
+    </div>
+
+    <script>
+        var oDiv0 = document.querySelector(".div0");
+        var oBtn1 = document.querySelectorAll(".btn1");
+        var oBtn2 = document.querySelectorAll(".btn2");
+         
+        for(var i=0;i<oBtn1.length;i++){
+            oBtn1[i].onclick=function(){
+                var parent = this.parentElement;
+                var preparent = parent.previousElementSibling;
+                if(preparent){
+                    oDiv0.insertBefore(parent,preparent)
+                }else{
+                    console.log("到顶了");
+                }
+            }
+            oBtn2[i].onclick=function(){
+                var parent =this.parentElement;
+                var nextparent=parent.nextElementSibling;
+                if(nextparent){
+                    oDiv0.insertBefore(nextparent,parent)
+                }else{
+                    console.log("到底了");
+                }
+            }
+        } 
+
+
+
+    </script>
+</body>
+
+</html>

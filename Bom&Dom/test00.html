@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .bdiv{
+            width: 800px;
+            height: 400px;
+            border: 1px solid black;
+        }
+        #tdiv{
+            width: 800px;
+            height: 200px;
+            border-bottom: 1px solid black;
+            text-align: center;
+        }
+        #odiv div{
+            width: 195px;
+            border-right: 1px solid black;
+            display: inline-block;
+        }
+        #odiv #odiv4{
+            border-right: none;
+        }
+        img{
+            width: 195px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="bdiv">
+        <div id="tdiv"><img id="tdiv1" src="./image/slider1.jpg" alt=""></div>
+        <div id="odiv">
+            <div id="odiv1"><img class="im" src="./image/slider1.jpg" alt=""></div>
+            <div id="odiv2"><img class="im" src="./image/slider2.jpg" alt=""></div>
+            <div id="odiv3"><img class="im" src="./image/slider3.jpg" alt=""></div>
+            <div id="odiv4"><img class="im" src="./image/slider4.jpg" alt=""></div>
+        </div>
+    </div>
+    <script>
+        var tDiv=document.getElementById("tdiv1");
+        var oDiv=document.getElementsByClassName("im");
+        console.log(oDiv);
+        for(var i=0;i<oDiv.length;i++){
+            oDiv[i].onmouseover=function(){
+                console.log("a");
+                var thissrc=this.getAttribute("src");
+                tDiv.setAttribute("src",thissrc);
+            }
+        }
+         
+    </script>
+</body>
+</html>

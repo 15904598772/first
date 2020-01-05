@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function foo(){
+            var num=10;
+            var sum=100-5*num;
+            var result=[];
+            for(var i=0;i<num;i++){
+                var ret=Math.floor(Math.random()*(sum+1));
+                result.push(ret+5);
+                sum=sum-ret;
+            }
+            return result;
+        }
+        console.log(foo());
+    
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .content {
+            width: 700px;
+            height: 172px;
+            border: 1px solid black;
+            margin: 0 auto;
+        }
+
+        .content .top {
+            width: 100%;
+            height: 50px;
+            display: inline-block;
+            background-color: black;
+        }
+
+        .top .tp {
+            padding-left: 0;
+            margin: 0;
+            height: 50px;
+            line-height: 50px;
+            color:white
+        }
+
+        .top .tp li {
+            display: inline-block;
+            /* color: white; */
+            width: 100px;
+            text-align: center;
+            height: 50px;
+        }
+
+        .tp .active {
+            background-color: #ddd;
+            color: #000;
+        }
+
+        .bottom div {
+            display: none;
+        }
+
+        .bottom .active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="content">
+        <div class="top">
+            <ul class="tp">
+                <li class="active">第一节课</li>
+                <li>第二节课</li>
+                <li>第三节课</li>
+            </ul>
+        </div>
+        <div class="bottom">
+            <div class="bt active">
+                <ul>
+                    <li>第一节课内容</li>
+                    <li>第一节课内容</li>
+                    <li>第一节课内容</li>
+                </ul>
+            </div>
+            <div class="bt">
+                <ul>
+                    <li>第二节课内容</li>
+                    <li>第二节课内容</li>
+                    <li>第二节课内容</li>
+                </ul>
+            </div>
+            <div class="bt">
+                <ul>
+                    <li>第三节课内容</li>
+                    <li>第三节课内容</li>
+                    <li>第三节课内容</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        var aTop=document.getElementsByClassName("top")[0].getElementsByTagName("li");
+        var aBottom=document.getElementsByClassName("bt");
+        for(var i=0;i<=aTop.length;i++){
+            aTop[i].index=i;
+            aTop[i].onmouseover = function(){
+                for(var j=0;j<aTop.length;j++){
+                    aTop[j].className="";
+                    aBottom[j].classList.remove("active");
+                }
+                this.className="active";
+                aBottom[this.index].classList.add("active");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
